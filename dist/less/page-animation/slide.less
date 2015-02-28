@@ -1,0 +1,54 @@
+/* slide */
+.forward.slideOut {
+	.animation(forwardSlideOut .7s both ease);
+}
+.forward.slideIn {
+	.animation(forwardSlideIn .7s both ease);
+}
+.backward.slideOut {
+	.animation(backwardSlideOut .7s both ease);
+}
+.backward.slideIn {
+	.animation(backwardSlideIn .7s both ease);
+}
+@-webkit-keyframes forwardSlideOut {
+	25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(-200%); }
+	100% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(-200%); }
+}
+@keyframes forwardSlideOut {
+	25% { opacity: .5; transform: translateZ(-500px); }
+	75% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
+	100% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
+}
+@-webkit-keyframes forwardSlideIn {
+	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(200%); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	100% { opacity: 1; -webkit-transform: translateZ(0) translateY(0); }
+}
+@keyframes forwardSlideIn {
+	0%, 25% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
+	75% { opacity: .5; transform: translateZ(-500px); }
+	100% { opacity: 1; transform: translateZ(0) translateY(0); }
+}
+
+@-webkit-keyframes backwardSlideOut {
+	25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(200%); }
+	100% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(200%); }
+}
+@keyframes backwardSlideOut {
+	25% { opacity: .5; transform: translateZ(-500px); }
+	75% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
+	100% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
+}
+@-webkit-keyframes backwardSlideIn {
+	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateY(-200%); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	100% { opacity: 1; -webkit-transform: translateZ(0) translateY(0); }
+}
+@keyframes backwardSlideIn {
+	0%, 25% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
+	75% { opacity: .5; transform: translateZ(-500px); }
+	100% { opacity: 1; transform: translateZ(0) translateY(0); }
+}

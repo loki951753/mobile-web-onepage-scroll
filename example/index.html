@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="loki" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Demo</title>
+	<link rel="stylesheet" type="text/css" href="../dist/css/mwos_min.css">
+	<style type="text/css">
+		/* 自定义每页的图片和背景 */
+		/* attention:这种实现方式灵活方便，但不适用于纯插件的使用方式，且代码中
+		 * HTML、CSS、JS代码耦合过度
+		 * 后期版本可以在插件参数设置中添加背景设置，自动判断页面数量及格式，
+		 * 动态插入HTML代码*/
+		section[data-id="1"] {
+			background: url('img/1.jpg') no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+			background-color: #3498db;
+		}
+		section[data-id="2"] {
+			background: url('img/2.jpg') no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+		section[data-id="3"] {
+			background: url('img/3.jpg') no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+		section[data-id="4"] {
+			background: url('img/4.jpg') no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="loader">
+		<div class="spinner">
+			<div class="cube1"></div>
+			<div class="cube2"></div>
+		</div>
+	</div>
+	<div class="container">
+		<section class="page current"></section>
+		<section class="page"></section>
+		<section class="page"></section>
+		<section class="page"></section>
+	</div>
+	<div id="orientLayer" class="mod-orient-layer">
+		<div class="mod-orient-layer__content">
+			<i class="mod-orient-layer__icon-orient"></i>
+			<div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+		</div>
+	</div>
+	<script src="../dist/js/zepto.min.js"></script>
+	<script src="../dist/js/mwos.js"></script>
+	<script>
+		$('.container').mwos({
+				navigation	: true,		// 有无指示点
+				arrow		: true,		// 有无指示箭头
+				music		: {
+								src : "http://res.eqxiu.com/group1/M00/C5/53/yq0KA1Tdu1-AGgdQABqRFnKzPcU014.mp3"
+							  },		// 有无背景音乐
+				pageAnimation: 'scaledowncenter'
+		});
+	</script>
+</body>
+</html>

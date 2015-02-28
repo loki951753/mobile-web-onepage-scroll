@@ -1,0 +1,23 @@
+//forward and backward use the same animation
+.scaleDownCenter {
+	.animation(scaleDownCenterAni .4s ease-in both);
+}
+.scaleUpCenter {
+	.animation(scaleUpCenterAni .4s ease-out both);
+}
+@-webkit-keyframes scaleDownCenterAni {
+	to { opacity: 0; -webkit-transform: scale(.7); }
+}
+@keyframes scaleDownCenterAni {
+	to { opacity: 0; transform: scale(.7); }
+}
+
+@-webkit-keyframes scaleUpCenterAni {
+	from { opacity: 0; -webkit-transform: scale(.7); }
+}
+@keyframes scaleUpCenterAni {
+	from { opacity: 0; transform: scale(.7); }
+}
+.delay400 {
+	.animation-delay(.4s);
+}

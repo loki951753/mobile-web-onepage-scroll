@@ -1,0 +1,42 @@
+/* sides */
+.forward.sidesOut {
+	.transform-origin(50%, -50%);
+	.animation(forwardSidesOut .5s both ease-in);
+}
+.forward.sidesIn {
+	.transform-origin(50%, 100%);
+	.animation(forwardSidesIn .5s both ease-out);
+}
+.backward.sidesOut {
+	.transform-origin(50%, 100%);
+	.animation(backwardSidesOut .5s both ease-in);
+}
+.backward.sidesIn {
+	.transform-origin(50%, -50%);
+	.animation(backwardSidesIn .5s both ease-out);
+}
+@-webkit-keyframes forwardSidesOut {
+	to { opacity: 0; -webkit-transform: translateZ(-500px) rotateX(-90deg); }
+}
+@keyframes forwardSidesOut {
+	to { opacity: 0; transform: translateZ(-500px) rotateX(-90deg); }
+}
+@-webkit-keyframes forwardSidesIn {
+	from { opacity: 0; -webkit-transform: translateZ(-500px) rotateX(90deg); }
+}
+@keyframes forwardSidesIn {
+	from { opacity: 0; transform: translateZ(-500px) rotateX(90deg); }
+}
+
+@-webkit-keyframes backwardSidesOut {
+	to { opacity: 0; -webkit-transform: translateZ(-500px) rotateX(90deg); }
+}
+@keyframes backwardSidesOut {
+	to { opacity: 0; transform: translateZ(-500px) rotateX(90deg); }
+}
+@-webkit-keyframes backwardSidesIn {
+	from { opacity: 0; -webkit-transform: translateZ(-500px) rotateX(-90deg); }
+}
+@keyframes backwardSidesIn {
+	from { opacity: 0; transform: translateZ(-500px) rotateX(-90deg); }
+}
